@@ -2,25 +2,28 @@ backend:
   name: github
   repo: amykapernick/amygoestoperth
   branch: netlifycms
-
-media_folder: static/img
-public_folder: /img
+media_folder: static/img # Media files will be stored in the repo under static/images/uploads
+public_folder: /img # The src attribute for uploaded media will begin with /images/uploads
+display_url: https://amygoestoperth.com.au
+slug:
+  encoding: "ascii"
 
 collections:
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
     create: true
+    extension: json
+    format: json
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slug", name: "slug", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Publish Date", name: "publish-date", widget: "date"}
       - {label: "Update Date", name: "update-date", widget: "date"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Image", name: "featured-image", widget: "image"}
+      - {label: "Featured Image", name: "featured-image", widget: "image", required: false}
       - label: "Body" 
         name: "body"
         widget: "list"
@@ -38,3 +41,5 @@ collections:
                 - {label: "Twitter", value: "twitter"}
                 - {label: "Codepen", value: "codepen"}
                 - {label: "Instagram", value: "instagram"}      
+    editor:
+      preview: true
