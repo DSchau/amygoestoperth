@@ -42,4 +42,4 @@ collections:
                 - {label: "Codepen", value: "codepen"}
                 - {label: "Instagram", value: "instagram"}      
     editor:
-      preview: true
+      preview: false
