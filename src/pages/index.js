@@ -37,11 +37,11 @@ const profiles = {
 
 export default class IndexPage extends React.Component {
     render() {
-        const {data} = this.props;
-        const {edges: posts} = data.allMarkdownRemark;
+        // const {data} = this.props;
+        // const {edges: posts} = data.allMarkdownRemark;
         const meta = {
-            name: data.site.siteMetadata.title,
-            desrcription: data.site.siteMetadata.description,
+            // name: data.site.siteMetadata.title,
+            // description: data.site.siteMetadata.description,
             slug: '/',
             image: HeaderImage
         }
@@ -55,33 +55,44 @@ export default class IndexPage extends React.Component {
     }
 }
 
-IndexPage.propTypes = {
-    data: PropTypes.shape({
-      allMarkdownRemark: PropTypes.shape({
-        edges: PropTypes.array,
-      }),
-    }),
-}
+// const query = graphql`
+//     query {
+//         site {
+//             siteMetadata {
+//                 title
+//                 description
+//             }
+//         }
+//     }
+// `
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
-  }
-`
+// IndexPage.propTypes = {
+//     data: PropTypes.shape({
+//       allMarkdownRemark: PropTypes.shape({
+//         edges: PropTypes.array,
+//       }),
+//     }),
+// }
+
+// export const pageQuery = graphql`
+//   query IndexQuery {
+//     allMarkdownRemark(
+//       sort: { order: DESC, fields: [frontmatter___date] },
+//       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
+//     ) {
+//       edges {
+//         node {
+//           id
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             title
+//             templateKey
+//             date(formatString: "MMMM DD, YYYY")
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
