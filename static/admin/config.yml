@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: amykapernick/amygoestoperth
-  branch: netlifycms
+  name: git-gateway
+
 media_folder: static/img # Media files will be stored in the repo under static/images/uploads
 public_folder: /img # The src attribute for uploaded media will begin with /images/uploads
 display_url: https://amygoestoperth.com.au

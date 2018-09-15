@@ -55,17 +55,6 @@ export default class IndexPage extends React.Component {
     }
 }
 
-// const query = graphql`
-//     query {
-//         site {
-//             siteMetadata {
-//                 title
-//                 description
-//             }
-//         }
-//     }
-// `
-
 // IndexPage.propTypes = {
 //     data: PropTypes.shape({
 //       allMarkdownRemark: PropTypes.shape({

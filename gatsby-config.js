@@ -23,12 +23,7 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [],
-      },
-    },
+    'gatsby-transformer-remark',
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
