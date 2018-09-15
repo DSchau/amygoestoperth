@@ -13,8 +13,6 @@ collections:
     label: "Blog"
     folder: "src/pages/blog"
     create: true
-    extension: json
-    format: json
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
